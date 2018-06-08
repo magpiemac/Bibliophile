@@ -3,9 +3,7 @@ class Api::BooksController < ApplicationController
 
   # GET /books
   def index
-    @books = Book.all
-
-    render json: @books
+    render json: Book.all
   end
 
   # GET /books/1
@@ -15,12 +13,12 @@ class Api::BooksController < ApplicationController
 
   # POST /books
   def create
-    @book = Book.new(book_params)
+    book = Book.new(book_params)
 
-    if @book.save
-      render json: @book, status: :created, location: @book
+    if book.save
+      render json: book, status: :created
     else
-      render json: @book.errors, status: :unprocessable_entity
+      render json: { message: book.errors }, status: 400
     end
   end
 
@@ -46,6 +44,6 @@ class Api::BooksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def book_params
-      params.fetch(:book, {})
+      params.require(:book).permit(:id, :title, :author, :notes, :status, :img_url)
     end
 end
