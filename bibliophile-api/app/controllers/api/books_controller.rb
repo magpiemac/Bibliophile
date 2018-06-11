@@ -27,7 +27,7 @@ class Api::BooksController < ApplicationController
     if @book.update(book_params)
       render json: @book
     else
-      render json: @book.errors, status: :unprocessable_entity
+      render json: @book.errors, status: 400
     end
   end
 
@@ -44,6 +44,6 @@ class Api::BooksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def book_params
-      params.require(:book).permit(:id, :title, :author, :notes, :status, :img_url)
+      params.permit(:book, :id, :title, :author, :notes, :status, :img_url)
     end
 end
