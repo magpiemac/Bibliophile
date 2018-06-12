@@ -7,18 +7,10 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 class App extends Component {
 
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      books: []
-    }
-  }
-
   componentDidMount() {
     fetch('http://localhost:3001/api/books')
     .then(response => response.json())
-    .then(books => this.setState({ books }))
+    //.then(books => this.setState({ books }))
   }
 
   render() {
@@ -28,7 +20,7 @@ class App extends Component {
         <div className="container">
           <h1>Bibliophile: for the Obsessive Book Lover</h1>
           <div className="App">
-            <Books books={this.state.books} />
+            <Books />
           </div>
        </div>
      </div>

@@ -4,19 +4,10 @@ import {
   combineReducers
 } from 'redux';
 import thunk from 'redux-thunk';
-
-const booksReducer = (state = [], action) => {
-  switch(action.type){
-    case 'GET_BOOKS_SUCCESS':
-      return action.books;
-
-    default:
-      return state;
-  }
-}
+import books from './reducers/books';
 
 const reducers = combineReducers({
-  books: booksReducer
+  books
 });
 
 const middleware = [thunk];

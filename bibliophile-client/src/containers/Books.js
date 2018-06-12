@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './Books.css';
 import BookCard from '../components/BookCard';
 import BookForm from './BookForm';
 
 class Books extends Component {
 
-  // constructor(props){
-  //   super(props)
-  //
-  //   this.state
-  // }
+  componentDidMount() {
+    
+  }
 
   render() {
     return(
@@ -22,4 +21,10 @@ class Books extends Component {
   }
 }
 
-export default Books;
+const mapStateToProps = (state) => {
+  return({
+    books: state.books
+  })
+}
+
+export default connect(mapStateToProps)(Books);
