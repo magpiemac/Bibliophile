@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('${API_URL}/books')
+    fetch('http://localhost:3001/api/books')
     .then(response => response.json())
     .then(books => this.setState({ books }))
   }
