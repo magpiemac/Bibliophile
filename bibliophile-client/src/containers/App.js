@@ -10,12 +10,10 @@ class App extends Component {
     return (
       <div>
         <CustomNavbar />
-        <div className="container">
           <h1>Bibliophile: for the Obsessive Book Lover</h1>
           <div className="App">
             <Books />
           </div>
-       </div>
      </div>
    );
   }

@@ -23,7 +23,7 @@ class BookForm extends Component {
     return (
       <div>
         Add a Book
-        <form>
+         <form onSubmit={this.handleOnSubmit}>
           <div>
             <label htmlFor='title'>Title:</label>
             <input

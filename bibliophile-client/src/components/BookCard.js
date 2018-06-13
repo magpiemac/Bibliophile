@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BookCard = ({book}) => (
+const BookCard = ({ book }) => (
   <div key={book.id} className="BookCard">
   <h3>{book.title} </h3>
   <p>Author: {book.author}</p>

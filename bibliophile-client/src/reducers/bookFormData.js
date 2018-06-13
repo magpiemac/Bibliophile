@@ -12,7 +12,7 @@ export default (state = initialState, action) => {
     case 'UPDATED_DATA':
       return action.bookFormData;
 
-      case 'RESET_SURFBOARD_FORM':
+      case 'RESET_BOOK_FORM':
       return initialState;
 
       default:

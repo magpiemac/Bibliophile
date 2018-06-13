@@ -6,8 +6,8 @@ export const updateBookFormData = bookFormData => {
   }
 }
 
-export const resetSurfboardForm = () => {
+export const resetBookForm = () => {
   return {
-    type: 'RESET_SURFBOARD_FORM'
+    type: 'RESET_BOOK_FORM'
   }
 }
