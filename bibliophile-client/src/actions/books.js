@@ -1,9 +1,5 @@
 const API_URL = process.env.REACT_APP_API_URL;
 
-  // fetch('http://localhost:3001/api/books')
-  //   .then(response => response.json())
-  //   .then(books => this.setState({ books }))
-
   //Action Creators
   const setBooks = books => {
     return {
@@ -11,6 +7,13 @@ const API_URL = process.env.REACT_APP_API_URL;
       books
    }
   }
+
+  const addBook = book => {
+  return {
+    type: 'CREATE_BOOK_SUCCESS',
+    book
+   }
+ }
 
     // Async Actions
     export const getBooks = () => {
@@ -32,7 +35,9 @@ const API_URL = process.env.REACT_APP_API_URL;
           body: JSON.stringify({ book: book })
         })
           .then(response => response.json())
-          .then(book => { debugger
+          .then(book => {
+            dispatch(addBook(book))
+            dispatch(resetBookForm())
           })
           .catch(error => console.log(error))
       }

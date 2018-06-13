@@ -3,7 +3,10 @@ export default (state = [], action) => {
     case 'GET_BOOKS_SUCCESS':
       return action.books;
 
-    default:
-      return state;
+      case 'CREATE_BOOK_SUCCESS':
+        return state.concat(action.books);
+
+      default:
+        return state;
   }
 }
