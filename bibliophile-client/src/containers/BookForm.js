@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateBookFormData } from '../actions/bookForm'
+import { createBook } from '../actions/books';
 
 class BookForm extends Component {
 
@@ -68,6 +69,8 @@ class BookForm extends Component {
               value={img_url}
             />
           </div>
+
+          <button type="submit">Add Book</button>
         </form>
       </div>
     )
@@ -80,4 +83,7 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect (mapStateToProps)(BookForm);
+export default connect (mapStateToProps, {
+  updateBookFormData,
+  createBook
+})(BookForm);
