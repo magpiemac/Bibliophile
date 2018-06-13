@@ -1,16 +1,21 @@
-export default (state = {
+const initialState = {
   title: '',
   author: ' ',
   notes: ' ',
   status: ' ',
   img_url: ' '
-}, action) => {
+}
+
+export default (state = initialState, action) => {
 
   switch(action.type) {
     case 'UPDATED_DATA':
-      return action.BookFormData
+      return action.bookFormData;
 
-    default:
-      return state;
+      case 'RESET_SURFBOARD_FORM':
+      return initialState;
+
+      default:
+        return state;
+      }
   }
-}
