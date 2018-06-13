@@ -14,8 +14,8 @@ class Books extends Component {
   render() {
     return(
       <div className="BooksContainer">
-        <h3>Books Component</h3>
-        {this.props.books.map(book => <BookCard book={book} />)}
+        <h3>Your Books</h3>
+         {this.props.books.map(book => <BookCard key={book.id} book={book} />)}
         <BookForm />
       </div>
     );
