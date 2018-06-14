@@ -4,7 +4,7 @@ export default (state = [], action) => {
       return action.books;
 
       case 'CREATE_BOOK_SUCCESS':
-        return state.concat(action.books);
+        return state.concat(action.book);
 
       default:
         return state;
