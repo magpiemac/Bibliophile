@@ -1,0 +1,32 @@
+.navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navBarLink {
+    float: left;
+}
+
+.navBarLink a {
+    display: block;
+    color: #919191;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+.navBarLink a:hover:not(.active) {
+    background-color: #fafafa;
+    color: #54a555;
+}
+
+.active {
+    background-color: #fafafa;
+}

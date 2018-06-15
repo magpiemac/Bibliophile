@@ -1,30 +1,24 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap'
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import './Navbar.css'
 
 export default class CustomNavbar extends Component {
   render(){
     return (
-          <Navbar inverse collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="#brand">Bibliophile</a>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav>
-            <NavItem
-                exact to="/"
-                >Home
-            </NavItem>
-            <NavItem
-               exact to="/about"
-               >About
-            </NavItem>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    )
+      <ul className="navBar">
+      <li className="navBarLink">
+        <NavLink
+          exact to="/"
+          >Home
+        </NavLink>
+       </li>
+       <li className="navBarLink">
+         <NavLink
+           exact to="/about"
+           >About
+         </NavLink>
+        </li>
+     </ul>
+    );
   }
 }
