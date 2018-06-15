@@ -8,6 +8,7 @@ import Books from './Books';
 import CustomNavbar from '../components/CustomNavbar';
 import About from '../components/About';
 import Home from '../components/Home';
+import Book from '../components/Book';
 
 
 class App extends Component {
@@ -19,9 +20,11 @@ class App extends Component {
               <CustomNavbar />
               <Route path="/" component={Home} />
               <Route exact path="/about" component={About} />
-              <Books />
+              <Route exact path="/books" component={Books} />
+              <Route exact path="/books/:id" component={Book} />
               </div>
         </Router>
+
    );
   }
 }

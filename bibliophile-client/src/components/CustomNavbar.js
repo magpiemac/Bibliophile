@@ -18,6 +18,12 @@ export default class CustomNavbar extends Component {
            >About
          </NavLink>
         </li>
+        <li className="navBarLink">
+          <NavLink
+            exact to="/books"
+            >Books
+          </NavLink>
+         </li>
      </ul>
     );
   }
