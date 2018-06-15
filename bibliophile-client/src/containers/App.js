@@ -4,6 +4,7 @@ import Books from './Books';
 import CustomNavbar from '../components/CustomNavbar';
 import About from '../components/About';
 import Home from '../components/Home';
+import Header from '../components/Header';
 
 class App extends Component {
 
