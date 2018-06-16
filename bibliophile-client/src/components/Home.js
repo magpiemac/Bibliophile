@@ -1,15 +1,36 @@
 import React from 'react';
 import './Home.css';
-// import { NavLink } from 'react-router-dom';
+import Header from './Header';
+import Section from './Section';
+import Footer from './Footer';
 
-class Home extends React.Component {
-  render() {
+const Home = () => {
     return (
-      <div>
-        <h1>Bibliophile</h1>
-      </div>
+        <div>
+
+            <Header/>
+
+            <div className="container text-muted">
+                <Section/>
+                <Footer/>
+            </div>
+
+        </div>
     );
-  }
-}
+};
+
+
 
 export default Home;
+
+// class Home extends React.Component {
+//   render() {
+//     return (
+//       <div>
+//         <h1>Bibliophile</h1>
+//       </div>
+//     );
+//   }
+// }
+//
+// export default Home;
