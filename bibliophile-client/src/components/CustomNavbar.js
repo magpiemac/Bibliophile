@@ -5,6 +5,7 @@ import './Navbar.css'
 export default class CustomNavbar extends Component {
   render(){
     return (
+      <nav className="navbar navbar-toggleable-sm bg-info navbar-inverse">
       <ul className="navBar">
       <li className="navBarLink">
         <NavLink
@@ -25,6 +26,7 @@ export default class CustomNavbar extends Component {
           </NavLink>
          </li>
      </ul>
+    </nav>
     );
   }
 }

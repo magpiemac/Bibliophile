@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 
 class Book extends React.Component {
   render() {
@@ -10,4 +12,4 @@ class Book extends React.Component {
   }
 }
 
- export default Book;
+ export default connect (Book);
