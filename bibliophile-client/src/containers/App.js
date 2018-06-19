@@ -8,7 +8,7 @@ import Books from './Books';
 import CustomNavbar from '../components/CustomNavbar';
 import About from '../components/About';
 import Home from '../components/Home';
-import Book from '../components/Book';
+import BookEdit from '../components/BookEdit';
 import createBrowserHistory from 'history/createBrowserHistory';
 
 const history = createBrowserHistory();
@@ -25,7 +25,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route path="/books" component={Books} />
-                        <Route path="/books/:id" component={Book} />
+                        <Route path="/book/:id" component={BookEdit} />
                         <Route path="/about" component={About} />
                     </Switch>
 
@@ -34,6 +34,6 @@ class App extends Component {
             </Router>
         </div>
     );
-};
+  };
 }
 export default App;

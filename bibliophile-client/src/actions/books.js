@@ -18,6 +18,13 @@ const API_URL = process.env.REACT_APP_API_URL;
    }
  }
 
+ const editBookId = book => {
+   return {
+     type: 'EDIT_BOOK_SUCCESS',
+   book
+  }
+}
+
 
 
     // Async Actions
@@ -47,3 +54,22 @@ const API_URL = process.env.REACT_APP_API_URL;
           .catch(error => console.log(error))
       }
    }
+
+
+   export const editBook = book => {
+     return dispatch => {
+       return fetch(`${API_URL}/books/{book.id}`, {
+         method: "PATCH",
+         headers: {
+           'Content-Type': 'application/json'
+         },
+         body: JSON.stringify({ book: book })
+       })
+         .then(response => response.json())
+         .then(book => {
+           dispatch(editBookId(book))
+           dispatch(resetBookForm())
+         })
+         .catch(error => console.log(error))
+     }
+  }
