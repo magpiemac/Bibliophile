@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 
 class BookEdit extends Component {
@@ -37,4 +37,4 @@ class BookEdit extends Component {
   }
 }
 
- export default connect (BookEdit);
+ export default (BookEdit);

@@ -5,7 +5,7 @@ import BookForm from './BookForm';
 import { getBooks } from '../actions/books';
 import './Books.css';
 
-class Books extends Component {
+class BooksPage extends Component {
 
   componentDidMount() {
     this.props.getBooks()
@@ -28,4 +28,4 @@ const mapStateToProps = (state) => {
   })
 }
 
-export default connect(mapStateToProps, { getBooks })(Books);
+export default connect(mapStateToProps, { getBooks })(BooksPage);

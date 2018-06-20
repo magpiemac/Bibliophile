@@ -4,7 +4,7 @@ import {
   Route, Switch
 } from 'react-router-dom';
 import './App.css';
-import Books from './Books';
+import BooksPage from './BooksPage';
 import CustomNavbar from '../components/CustomNavbar';
 import About from '../components/About';
 import Home from '../components/Home';
@@ -24,8 +24,9 @@ class App extends Component {
 
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route path="/books" component={Books} />
-                        <Route path="/book/:id" component={BookEdit} />
+                        <Route path="/books" component={BooksPage} />
+                          <Route path="/book/edit" component={BookEdit} />
+                        <Route path="/books/:id" component={BookEdit} />
                         <Route path="/about" component={About} />
                     </Switch>
 
