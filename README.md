@@ -7,13 +7,17 @@ A React and Redux app for organizing personal library. Add, review and keep note
 Usage
 
 The app uses a Rails API backend to store data. Please run the rails server on localhost:3001.
+
 $ bundle
+
 $ rake db:migrate
 
 $ rake db:seed
+
 $ rails s
 
 The React – Redux frontend runs on localhost:3000.
+
 $ npm install && npm start  
 
 Contributions
