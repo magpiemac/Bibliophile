@@ -21,6 +21,7 @@ class BookForm extends Component {
   render() {
     const { title, author, notes, status, img_url } = this.props.bookFormData;
     return (
+      <div className="BookCard">
       <div>
         Add a Book
          <form onSubmit={this.handleOnSubmit}>
@@ -72,6 +73,7 @@ class BookForm extends Component {
 
           <button type="submit">Add Book</button>
         </form>
+      </div>
       </div>
     )
   }

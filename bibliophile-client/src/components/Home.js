@@ -2,19 +2,14 @@ import React from 'react';
 import './Home.css';
 import Header from './Header';
 import Section from './Section';
-import Footer from './Footer';
 
 const Home = () => {
     return (
         <div>
-
             <Header/>
-
             <div className="container text-muted">
-                <Section/>
-                <Footer/>
+              <Section/>
             </div>
-
         </div>
     );
 };
