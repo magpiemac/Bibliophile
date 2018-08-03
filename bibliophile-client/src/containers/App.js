@@ -22,13 +22,13 @@ class App extends Component {
 
                     <CustomNavbar />
 
-                    <Switch>
-                        <Route exact path="/" component={Home} />
-                        <Route path="/books" component={BooksPage} />
+                        <Switch>
+                          <Route exact path="/" component={Home} />
+                          <Route path="/books" component={BooksPage} />
                           <Route path="/book/edit" component={BookEdit} />
-                        <Route path="/books/:id" component={BookEdit} />
-                        <Route path="/about" component={About} />
-                    </Switch>
+                          <Route path="/books/:id" component={BookEdit} />
+                          <Route path="/about" component={About} />
+                      </Switch>
 
                 </div>
 

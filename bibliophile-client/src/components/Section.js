@@ -8,7 +8,7 @@ const Section = () => {
             <div className="col-md-1 col-lg-3">
                 <div className="card">
                     <a>
-                        <img src={oldLibrary} className="card-img-top img-fluid" alt="Library"/>
+                        <img src={oldLibrary} className="center" alt="Library"/>
                     </a>
                     <div className="card-block">
                         <h3 className="card-title">Your personal library</h3>
