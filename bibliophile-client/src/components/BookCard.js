@@ -10,7 +10,17 @@ const BookCard = ({ book }) => (
   <p>Notes: {book.notes}</p>
   <p>Status: {book.status}</p>
   <img className="BookImage" src={book.img_url} alt={book.name} />
+
+  <button className="button" type="submit">Edit Book</button>
+
+
+  <button className="button" onClick={removeBook}>Delete Book</button>
+
   </div>
 )
+
+const removeBook = () => {
+  console.log("clicked")
+}
 
 export default BookCard;
