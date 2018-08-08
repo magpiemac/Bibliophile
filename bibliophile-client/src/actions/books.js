@@ -25,6 +25,13 @@ const API_URL = process.env.REACT_APP_API_URL;
   }
 }
 
+const deleteBookId = book => {
+  return {
+    type: 'DELETE_BOOK_SUCCESS',
+  book
+ }
+}
+
 
 
     // Async Actions
@@ -74,7 +81,7 @@ const API_URL = process.env.REACT_APP_API_URL;
      }
   }
 
-  export const removeBook = book => {
+  export const deleteBook = book => {
     return dispatch => {
       return fetch(`${API_URL}/books/{book.id}`, {
         method: "DELETE",
@@ -85,7 +92,7 @@ const API_URL = process.env.REACT_APP_API_URL;
       })
         .then(response => response.json())
         .then(book => {
-          dispatch(addBook(book))
+          dispatch(deleteBookId(book))
           dispatch(resetBookForm())
         })
         .catch(error => console.log(error))

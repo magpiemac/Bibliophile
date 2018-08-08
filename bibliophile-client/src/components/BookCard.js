@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { deleteBook } from '../actions/books';
 
 class BookCard extends Component {
+
+  onClick = event => {
+    event.preventDefault()
+    this.props.deleteBook(this.props.bookFormData)
+  }
 
   render() {
     const { book } = this.props
@@ -13,18 +19,14 @@ class BookCard extends Component {
         <p>Author: {book.author}</p>
         <p>Notes: {book.notes}</p>
         <p>Status: {book.status}</p>
-        <img className="BookImage" src={book.img_url} alt={book.name} />
+        <img className="img-responsive" src={book.img_url} alt={book.name} />
 
-        <button className="button" type="submit">Edit Book</button>
-        <button className="button" onClick={removeBook}>Delete Book</button>
-
+        <button className="btn btn-secondary btn-med m-2" type="submit">Edit Book</button>
+        <button className="btn btn-secondary btn-med m-2" onClick={deleteBook}>Delete Book</button>
         </div>
         )
     }
 }
 
-const removeBook = () => {
-    console.log("clicked")
-}
 
 export default BookCard;
