@@ -5,7 +5,7 @@ import './Navbar.css'
 export default class CustomNavbar extends Component {
   render(){
     return (
-      <nav className="navbar navbar-toggleable-sm bg-info navbar-inverse">
+      <nav className="navbar navbar-inverse">
       <ul className="navBar">
       <li className="navBarLink">
         <NavLink

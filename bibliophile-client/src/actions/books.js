@@ -76,7 +76,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 
   export const removeBook = book => {
     return dispatch => {
-      return fetch(`${API_URL}/books`, {
+      return fetch(`${API_URL}/books/{book.id}`, {
         method: "DELETE",
         headers: {
           'Content-Type': 'application/json'
